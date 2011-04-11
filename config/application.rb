@@ -8,6 +8,8 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module DemoApp
   class Application < Rails::Application
+config.filter_parameters << :password  
+config.secret_token = '5c61ed3287d79f0d2ae7ff884990b134805742dd4cd6096ed6cd3de2a9ad000bb668ef493fb9b6f52f6fc3509d3c1e5f3941f04e860377bc57c30f619b316e50'
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
